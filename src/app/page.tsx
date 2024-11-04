@@ -1,11 +1,10 @@
-"use client"
-import Playlists from "@/components/playlists/playlists";
-
+"use client";
+import SignUp from "@/components/sign-up/signUp";
 
 export default function Home() {
   return (
     <>
-      <Playlists />
+      <SignUp />
     </>
   );
 }
