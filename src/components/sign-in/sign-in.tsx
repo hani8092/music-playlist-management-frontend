@@ -2,6 +2,7 @@
 
 import { signIn } from "@/services/user.service";
 import { validateEmail, validatePassword } from "@/utils/utils";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
@@ -99,9 +100,8 @@ function SignIn() {
                 id="email"
                 value={formData.email}
                 onChange={handleChange}
-                className={`w-full px-3 py-2 text-gray-300 bg-[#224957] rounded focus:outline-none focus:ring ${
-                  errors.email ? `focus:ring-[#EB5757]` : `focus:ring-[#2BD17E]`
-                }`}
+                className={`w-full px-3 py-2 text-gray-300 bg-[#224957] rounded focus:outline-none focus:ring ${errors.email ? `focus:ring-[#EB5757]` : `focus:ring-[#2BD17E]`
+                  }`}
               />
               {errors.email && (
                 <p className="text-[#EB5757] text-xs mt-1.5 ml-1">
@@ -121,11 +121,10 @@ function SignIn() {
                 id="password"
                 value={formData.password}
                 onChange={handleChange}
-                className={`w-full px-3 py-2 text-gray-300 bg-[#224957] rounded focus:outline-none focus:ring ${
-                  errors.password
+                className={`w-full px-3 py-2 text-gray-300 bg-[#224957] rounded focus:outline-none focus:ring ${errors.password
                     ? `focus:ring-[#EB5757]`
                     : `focus:ring-[#2BD17E]`
-                }`}
+                  }`}
               />
               {errors.password && (
                 <p className="text-[#EB5757] text-xs mt-1.5 ml-1">
@@ -133,6 +132,7 @@ function SignIn() {
                 </p>
               )}
             </div>
+            <div className="text-[12px] text-white p-2">Don't have an account? <Link href="/sign-up">sign up</Link></div>
 
             <button
               type="submit"

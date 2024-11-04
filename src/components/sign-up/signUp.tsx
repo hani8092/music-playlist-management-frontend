@@ -2,6 +2,7 @@
 
 import { signUp } from "@/services/user.service";
 import { validateEmail, validatePassword } from "@/utils/utils";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
@@ -168,7 +169,7 @@ const SignUp = () => {
                                 </p>
                             )}
                         </div>
-
+                        <div className="text-[12px] text-white p-2">Already have an account? <Link href="/sign-in">sign in</Link></div>
                         <button
                             type="submit"
                             disabled={
