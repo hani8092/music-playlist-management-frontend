@@ -64,6 +64,7 @@ function Playlists() {
                         className="flex items-center"
                         onClick={() => {
                             localStorage.clear();
+                                push("/sign-up");
                         }}
                     >
                         <span className="mr-2">Logout</span>
