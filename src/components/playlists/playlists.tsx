@@ -100,6 +100,7 @@ function Playlists() {
                                 }}>edit</button> */}
                             </div>
                         ))}
+                        {!playlists?.length > 0 && <>No data found</>}
                     </div>
 
                 </main>{" "}
