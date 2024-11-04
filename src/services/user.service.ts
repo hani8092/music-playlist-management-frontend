@@ -12,7 +12,7 @@ export interface SignInFormData {
 }
 
 export const axiosClient = axios.create({
-  baseURL: "http://localhost:3000",
+  baseURL: process.env.NEXT_PUBLIC_BASE_URL,
 });
 
 export const signUp = async (formData: SignUpFormData) => {
