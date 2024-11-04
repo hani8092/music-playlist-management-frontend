@@ -165,7 +165,7 @@ function PlaylistForm({ edit }: { edit: boolean }) {
                         <button
                             type="button"
                             onClick={() => {
-                                push("/");
+                                push("/playlists");
                             }}
                             className="text-white bg-transparent border border-gray-300 hover:bg-[#224957] font-medium rounded-lg text-sm px-10 py-2.5 me-2 mb-2"
                         >
