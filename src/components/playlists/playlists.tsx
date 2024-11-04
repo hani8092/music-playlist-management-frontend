@@ -64,7 +64,7 @@ function Playlists() {
                         className="flex items-center"
                         onClick={() => {
                             localStorage.clear();
-                                push("/sign-up");
+                            push("/sign-up");
                         }}
                     >
                         <span className="mr-2">Logout</span>
@@ -100,7 +100,7 @@ function Playlists() {
                                 }}>edit</button> */}
                             </div>
                         ))}
-                        {!playlists?.length > 0 && <>No data found</>}
+                        {!(playlists?.length > 0) && <>No data found</>}
                     </div>
 
                 </main>{" "}
