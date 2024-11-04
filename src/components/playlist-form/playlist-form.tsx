@@ -87,7 +87,7 @@ function PlaylistForm({ edit }: { edit: boolean }) {
                     });
 
                     setTimeout(() => {
-                        push("/");
+                        push("/playlists");
                     }, 2000);
                 }
 
